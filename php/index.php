@@ -128,74 +128,8 @@ if ($result->num_rows > 0) {
 	}
 }
 
+/*echo "generated query : ". $sql*/
 
-/* if($_POST["gender"]=="Y"){
-	$gender = 1;
-}
 
-if($_POST["dept_size"]=="Y"){
-	$dept_size=1;
-	$sql = "SELECT dept_name, emp_count, m_count, f_count, ( m_count / f_count) as g_ratio FROM (SELECT dept_name, COUNT(case when gender='M' then 1 end) as m_count, count(case when gender='F' then 1 end) AS f_count, count(*) as emp_count FROM (SELECT employees.*, departments.dept_name FROM employees, departments, dept_emp where dept_emp.dept_no=departments.dept_no AND dept_emp.emp_no=employees.emp_no AND dept_emp.dept_no=departments.dept_no"; 
-	$later = ") AS T GROUP BY dept_name order by emp_count desc ) AS T order by emp_count desc;";
-}else{
-	$sql = "SELECT employees.*, departments.dept_name FROM employees, departments, dept_emp where dept_emp.dept_no=departments.dept_no AND dept_emp.emp_no=employees.emp_no AND dept_emp.dept_no=departments.dept_no";
-}
-
-+--------------------+
-| title              |
-+--------------------+
-| Senior Engineer    |
-| Staff              |
-| Engineer           |
-| Senior Staff       |
-| Assistant Engineer |
-| Technique Leader   |
-| Manager            |
-+--------------------+
-if( $_POST["id"] || $_POST["lname"] || $_POST["dept"]){
-	if($_POST["id"]){
-		$sql = $sql . " AND employees.emp_no='". $_POST["id"] ."'";
-		if($_POST["lname"]){
-			$sql = $sql." AND employees.last_name='".$_POST["lname"]."'";
-		}
-		if($_POST["dept"]){
-			$sql = $sql." AND departments.dept_name='".$_POST["dept"]."'";
-		}
-	}else if($_POST["lname"]){
-		$sql = $sql . " AND employees.last_name='" . $_POST["lname"] . "'";
-		if($_POST["dept"]){
-			$sql = $sql." AND departments.dept_name='".$_POST["dept"]."'";
-		}
-	}else if($_POST["dept"]){
-			$sql = $sql . " AND departments.dept_name='" . $_POST["dept"] . "'";
-		}
-}
-
-if($dept_size == 1){
-	$sql = $sql . $later ;
-}
-
-		echo "<hr>" ;
-	echo "generated query :<br>". $sql. "<br>" ;
-	$result = $conn->query($sql);
-	if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			if($dept_size == 1){
-				if($gender == 1){
-					echo "[ department : " .  $row["dept_name"] . " ]" . " [ employee_count : " . $row["emp_count"] . " ] [ gender_ratio : " . $row["g_ratio"] .  " ] <br>";
-				}else{
-					echo "[ department : " .  $row["dept_name"] . " ]" . " [ employee_count : " . $row["emp_count"] . " ] <br>";
-				}
-			}else if($gender == 1){
-				echo "[id: " . $row["emp_no"]. " ] [ Name: " . $row["first_name"]. " " . $row["last_name"]. "]  [ Dept : " . $row["dept_name"] . " ] " . "[ gender : " . $row["g_ratio"] . " ]" . "<br>";
-			}else{
-				echo "[id: " . $row["emp_no"]. " ] [ Name: " . $row["first_name"]. " " . $row["last_name"]. "]  [ Dept : " . $row["dept_name"] . " ] " . "<br>";
-			}
-}
-} else {
-	echo "0 results";
-
-}*/
 
 ?>
