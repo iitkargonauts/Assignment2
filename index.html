@@ -1,0 +1,111 @@
+<html>
+	<head> <title> MySQL </title> </head>
+	<body>
+		<!--- <form action="php/index.php" method="post"> -->
+
+		Query 1:<br>
+		<form action="php/index.php" method="post">
+			<input type="hidden" name = "q1" value="haha">
+			id : <input type="text" name="id" onfocus="this.value=''" value="Enter ID Here"><br>
+			last_name : <input type="text" name="lname" onfocus="this.value=''" value="Enter Last Name Here"><br>
+			select dept. : <br>
+			Select dept : <br>
+
+                        <select name="dept_no">
+                                <option value="Marketing">Marketing</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Human Resources">H R</option>
+                                <option value="Production">Production</option>
+                                <option value="Development">Development</option>
+                                <option value="Quality Management">Quality Management</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Research">Research</option>
+                                <option value="Customer Services">Customer Service</option>
+                        </select>
+
+			<input type="submit" name="q1" value="Find Employees"><br>
+		</form>
+
+		Query 2:<br>
+		<form action="php/index.php" method="post">
+			<input type="hidden" name = "q2" value="haha">
+			<input type="submit" name="q2" value="Sorted Departments"><br>
+		</form>
+
+		Query 3:<br>
+		<form action="php/index.php" method="post">
+			<input type="hidden" visible="false" name = "q3" value="haha">
+			dept. : <input type="text" name="dept" onfocus="this.value=''" value="Enter Department Here"><br>
+
+			<input type="submit" name="q3" value="Employyes order with Tenure"><br>
+		</form>
+
+
+		Query 4:<br>
+		<input type="hidden" visible="false" name = "q4" value="haha">
+		<form action="php/index.php" method="post">
+			<input type="submit" name="q4" value="Gender Ratio"><br>
+		</form>
+
+
+		Query 5:<br>
+		<form action="php/index.php" method="post">
+			<input type="hidden" visible="false" name = "q5" value="haha">
+			<!---<select name="depo">
+                                <option value="d001">Marketing</option>
+                                <option value="d002">Finance</option>
+                                <option value="d003">H R</option>
+                                <option value="d004">Production</option>
+                                <option value="d005">Development</option>
+                                <option value="d006">Quality Management</option>
+                                <option value="d007">Sales</option>
+                                <option value="d008">Research</option>
+                                <option value="d009">Customer Service</option>
+			</select> -->
+			Select dept : <br>
+
+                        <select name="dept_no">
+                                <option value="d001">Marketing</option>
+                                <option value="d002">Finance</option>
+                                <option value="d003">H R</option>
+                                <option value="d004">Production</option>
+                                <option value="d005">Development</option>
+                                <option value="d006">Quality Management</option>
+                                <option value="d007">Sales</option>
+                                <option value="d008">Research</option>
+                                <option value="d009">Customer Service</option>
+                        </select>
+			<br>
+			Select title : <br>
+
+			<select name="title">
+				<option value="Senior Engineer">Senior Engineer</option>
+				<option value="Assistant Engineer">Assistant Engineer</option>
+				<option value="Senior Staff">Senior Staff</option>
+				<option value="Staff">Staff</option>
+				<option value="Engineer">Engineer</option>
+				<option value="Technique Leader">Technique Leader</option>
+				<option value="Manager">Manager</option>
+			</select>
+			<br>
+
+			<input type="submit" name="q5" value="Gender Pay Ratio"><br>
+		</form>
+
+		<!---	id : <input type="text" name="id" onfocus="this.value=''" value="Enter ID Here"><br>
+	  last_name : <input type="text" name="lname" onfocus="this.value=''" value="Enter Last Name Here"><br>
+	  dept. : <input type="text" name="dept" onfocus="this.value=''" value="Enter Department Here"><br>
+	  <br>
+	  Do you want to see which departments are largest ?(Overrides above department filter, but still maintains the id, last_name filter)<br>
+	  <input type="radio" name="dept_size" value="Y">Y
+	  <input type="radio" name="dept_size" value="N" checked>N
+	  <br>
+
+	  Do you want to see gender ratio in each department?<br>
+	  <input type="radio" name="gender" value="Y">Y
+	  <input type="radio" name="gender" value="N" checked>N
+	  <br>
+
+	  <input type="submit" name="submit" value="GO"> -->
+	</body>
+</html>
